@@ -31,5 +31,9 @@ public class Retangulo {
     public double calcPerimetro(){
         return(2*(altura + base));
     }
+
+    public double calcDiagonal(){
+        return Math.sqrt(Math.pow(base, 2) + Math.pow(altura, 2));
+    }
     
 }
