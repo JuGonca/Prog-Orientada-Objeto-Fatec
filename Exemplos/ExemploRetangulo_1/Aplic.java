@@ -25,6 +25,10 @@ public class Aplic {
         //Implementação do Caso de Uso
         //Calcular Perímetro
         System.out.println("Perímetro do Retângulo: " + objRet.calcPerimetro());
+
+        //Implementação do caso de uso
+        //Calcular Diagonal Retangulo
+        System.out.println("Diagonal: " + objRet.calcDiagonal());
         
     }
     
