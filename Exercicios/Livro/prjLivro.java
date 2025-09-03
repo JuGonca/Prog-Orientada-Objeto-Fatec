@@ -8,9 +8,12 @@ public class Livro {
     boolean situacao;
     double ValMultaDiaria;
     
-    public void Livro(int id, String tit){
+    public Livro(int id, String tit, boolean sit, double ValMulta){
         identificacao = id;
         titulo = tit;
+        situacao = sit;
+        ValMultaDiaria = ValMulta;
+        
     }
     
     public void setValMultaDiaria(double a){
