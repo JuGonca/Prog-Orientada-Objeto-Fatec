@@ -28,9 +28,7 @@ public class Aplic {
         
         situacao = false;
         
-        Livro novoLivro = new Livro();
-        
-        novoLivro.Livro(id, titulo);
+        Livro novoLivro = new Livro(id, titulo, situacao, multaDiaria);
         
         do{
             System.out.println("Escolha uma opção: \n");
@@ -44,38 +42,38 @@ public class Aplic {
             if(opcao == 1){
             System.out.println("ID: " + novoLivro.getIdentificacao());
             System.out.println("Título: " + novoLivro.getTitulo());
-            if (situacao == false){
+            if (novoLivro.getSituacao() == false){
                 System.out.println("Status: Disponível.");
             }
             else{
                 System.out.println("Status: Indisponível.");
             }
             System.out.println("Multa Diária: " + multaDiaria);
-        }
-        else if(opcao == 2){
-            if(situacao == false){
-                novoLivro.emprestar();
-                System.out.println("Status atualizado para: Indisponível");
+            }
+            else if(opcao == 2){
+                if(novoLivro.getSituacao() == false){
+                    novoLivro.emprestar();
+                    System.out.println("Status atualizado para: Indisponível");
+                }
+                else{
+                    System.out.println("O Livro está emprestado.");
+                }
+            }
+            else if(opcao == 3){
+                if(novoLivro.getSituacao() == true){
+                    System.out.println("Informe a quantidade de dias de atraso: ");
+                    diasAtraso = entrada.nextInt();
+
+                    System.out.println("Status atualizado para: Disponível.");
+                    System.out.println("Valor Multa: R$" + novoLivro.devolver(diasAtraso) );
+                }
+                else{
+                    System.out.println("O Livro já está disponível");
+                }
             }
             else{
-                System.out.println("O Livro está emprestado.");
+                System.out.println("\nEncerrando...");
             }
-        }
-        else if(opcao == 3){
-            if(situacao == true){
-                System.out.println("Informe a quantidade de dias de atraso: ");
-                diasAtraso = entrada.nextInt();
-                
-                System.out.println("Status atualizado para: Disponível.");
-                System.out.println("Valor Multa: R$" + novoLivro.devolver(diasAtraso) );
-            }
-            else{
-                System.out.println("O Livro já está disponível");
-            }
-        }
-        else{
-            System.out.println("\nEncerrando...");
-        }
         }while(opcao < 4);
        
     }
