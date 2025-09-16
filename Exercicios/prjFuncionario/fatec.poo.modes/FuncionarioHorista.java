@@ -3,11 +3,11 @@ package fatec.poo.model;
  *
  * @author Júlia
  */
-public class FunicionarioHorista extends Funcionario{
+public class FuncionarioHorista extends Funcionario{
     private double valorHoraTrab;
     private int qtdHoraTrab;
     
-    public FuncionarioHorista(int r, String n String dt, double vh){
+    public FuncionarioHorista(int r, String n, String dt, double vh){
         super(r,n,dt);
         valorHoraTrab = vh;
     }
