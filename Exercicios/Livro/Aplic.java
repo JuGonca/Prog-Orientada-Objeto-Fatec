@@ -31,6 +31,7 @@ public class Aplic {
         Livro novoLivro = new Livro(id, titulo, situacao, multaDiaria);
         
         do{
+            //Opções de interação
             System.out.println("Escolha uma opção: \n");
             System.out.println("1 - Consultar Livro.");
             System.out.println("2 - Emprestar Livro.");
@@ -38,7 +39,8 @@ public class Aplic {
             System.out.println("4 - Sair.");
             
             opcao = entrada.nextInt();
-            
+
+            //Informa os dados e o status do livor
             if(opcao == 1){
             System.out.println("ID: " + novoLivro.getIdentificacao());
             System.out.println("Título: " + novoLivro.getTitulo());
@@ -50,6 +52,7 @@ public class Aplic {
             }
             System.out.println("Multa Diária: " + multaDiaria);
             }
+            //Empréstimo do livro.
             else if(opcao == 2){
                 if(novoLivro.getSituacao() == false){
                     novoLivro.emprestar();
@@ -59,11 +62,12 @@ public class Aplic {
                     System.out.println("O Livro está emprestado.");
                 }
             }
+            //Devolução do livro
             else if(opcao == 3){
                 if(novoLivro.getSituacao() == true){
                     System.out.println("Informe a quantidade de dias de atraso: ");
                     diasAtraso = entrada.nextInt();
-
+                    //Atualiza status e calcula a multa
                     System.out.println("Status atualizado para: Disponível.");
                     System.out.println("Valor Multa: R$" + novoLivro.devolver(diasAtraso) );
                 }
