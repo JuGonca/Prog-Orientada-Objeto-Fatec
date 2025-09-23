@@ -3,17 +3,14 @@
  * @author Júlia
  */
 public class Livro {
-    int identificacao;
-    String titulo;
-    boolean situacao;
-    double ValMultaDiaria;
+    private int identificacao;
+    private String titulo;
+    private boolean situacao;
+    private double ValMultaDiaria;
     
-    public Livro(int id, String tit, boolean sit, double ValMulta){
+    public Livro(int id, String tit){
         identificacao = id;
         titulo = tit;
-        situacao = sit;
-        ValMultaDiaria = ValMulta;
-        
     }
     
     public void setValMultaDiaria(double a){
