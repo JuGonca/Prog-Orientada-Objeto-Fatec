@@ -2,10 +2,11 @@
 import fatec.poo.model.FuncionarioComissionado;
 import fatec.poo.model.FuncionarioHorista;
 import fatec.poo.model.FuncionarioMensalista;
+import fatec.poo.model.Departamento;
 
 /**
  *
- * @author Dimas
+ * @author Júlia
  */
 public class Aplic {
     public static void main(String[] args) {
@@ -38,9 +39,12 @@ public class Aplic {
     
         //Estabelece a associação entre um objeto da classe Departamento com
         //um objeto das classes FuncionarioHorista e FuncionarioMensalista
+        /*dep1.addFuncionario(funcHor);
+          dep1.addFuncionario(funcMen);*/
     
         //Estabelece a associação entre um objeto da classe Departamento com
         //um objeto da classe FuncionarioComissionado
+        /*dep2.addFuncionario(FuncCom);*/
     
     }    
 }
